@@ -54,7 +54,9 @@ public class WorldStates
         if (states.ContainsKey(key))
             states[key] = value;
         else
+        {
             states.Add(key, value);
+        }
     }
 
     public Dictionary<string, int> GetStates()

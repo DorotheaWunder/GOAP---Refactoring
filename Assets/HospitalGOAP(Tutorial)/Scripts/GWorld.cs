@@ -6,10 +6,13 @@ public sealed class GWorld
 {
     private static readonly GWorld instance = new GWorld();
     private static WorldStates world;
-    
-    private GWorld(){}
 
-    public static GWorld Instance
+    static GWorld()
+    {
+        world = new WorldStates();
+    }
+
+    public static GWorld Instance 
     {
         get { return instance; }
     }
