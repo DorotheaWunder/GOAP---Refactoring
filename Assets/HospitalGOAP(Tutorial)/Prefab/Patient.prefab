@@ -2989,6 +2989,7 @@ GameObject:
   - component: {fileID: 6923898031448466880}
   - component: {fileID: -5703035223326850731}
   - component: {fileID: 6008696700881303653}
+  - component: {fileID: 490442027358093607}
   - component: {fileID: -8682003851405607504}
   m_Layer: 0
   m_Name: Patient
@@ -3065,11 +3066,36 @@ MonoBehaviour:
   cost: 1
   target: {fileID: 0}
   targetTag: Door
-  duration: 2
+  duration: 1
   preConditions: []
   afterEffects:
   - key: hasArrived
     value: 1
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &490442027358093607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881807149238628900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20549dee63375548b690fa324ad5c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Register
+  actionName: Register
+  cost: 1
+  target: {fileID: 0}
+  targetTag: Reception
+  duration: 2
+  preConditions:
+  - key: hasArrived
+    value: 0
+  afterEffects:
+  - key: hasRegistered
+    value: 0
   agent: {fileID: 0}
   running: 0
 --- !u!114 &-8682003851405607504
@@ -3090,7 +3116,7 @@ MonoBehaviour:
   targetTag: WaitingArea
   duration: 0
   preConditions:
-  - key: hasArrived
+  - key: hasRegistered
     value: 0
   afterEffects:
   - key: isWaiting
