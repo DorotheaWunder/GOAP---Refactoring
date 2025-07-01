@@ -34,12 +34,12 @@ public class WorldStates
             states[key] += value;
             if (states[key] <= 0)
             {
-                RemoveState(key);
+                states.Remove(key);
             }
-            else
-            {
-                states.Add(key,value);
-            }
+        }
+        else
+        {
+            states.Add(key, value);
         }
     }
 
