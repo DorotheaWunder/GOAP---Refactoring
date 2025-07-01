@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 public abstract class GAction : MonoBehaviour
 {
     public string actionName = "Action";
     public float cost = 1.0f;
     public GameObject target;
-    public GameObject targetTag;
+    public string targetTag;
     public float duration = 0;
     public WorldState[] preConditions;
     public WorldState[] afterEffects;
@@ -18,7 +19,7 @@ public abstract class GAction : MonoBehaviour
     public Dictionary<string, int> effects;
 
     public WorldStates agentBeliefs;
-    public bool isRunning = false;
+    [FormerlySerializedAs("isRunning")] public bool running = false;
 
     public GAction()
     {
