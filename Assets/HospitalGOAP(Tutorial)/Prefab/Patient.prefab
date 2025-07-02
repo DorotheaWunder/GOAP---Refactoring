@@ -2993,6 +2993,7 @@ GameObject:
   - component: {fileID: 490442027358093607}
   - component: {fileID: -8682003851405607504}
   - component: {fileID: -4726470035776621702}
+  - component: {fileID: 2325778963780942103}
   m_Layer: 0
   m_Name: Patient
   m_TagString: Untagged
@@ -3050,7 +3051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2dd9d66dc50a654f87e032000485af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GAgentVisual
-  thisAgent: {fileID: 0}
+  thisAgent: {fileID: -5703035223326850731}
 --- !u!114 &-5703035223326850731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3161,6 +3162,31 @@ MonoBehaviour:
   afterEffects:
   - key: isTreated
     value: 1
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &2325778963780942103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881807149238628900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a57d7ad4e0e63040819b8c32c10438d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoHome
+  actionName: Go Home
+  cost: 1
+  target: {fileID: 0}
+  targetTag: Home
+  duration: 0
+  preConditions:
+  - key: isCured
+    value: 0
+  afterEffects:
+  - key: isHome
+    value: 0
   agent: {fileID: 0}
   running: 0
 --- !u!1 &7927236269272520591

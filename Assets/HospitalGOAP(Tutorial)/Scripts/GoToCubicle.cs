@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GetTreated : GAction
+public class GoToCubicle : GAction
 {
     GameObject resource;
     public override bool PrePerform()
@@ -13,9 +13,10 @@ public class GetTreated : GAction
 
     public override bool PostPerform()
     {
-        GWorld.Instance.GetWorld().ModifyState("Treated", 1);
-        beliefs.ModifyState("isCured", 1);
+        GWorld.Instance.GetWorld().ModifyState("TreatingPatient", 1);
+        GWorld.Instance.AddCubicle(target);
         inventory.RemoveItem(target);
+        GWorld.Instance.GetWorld().ModifyState("FreeCubicle", 1);
         return true;
     }
 }
