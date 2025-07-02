@@ -1151,7 +1151,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 8.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1196,10 +1196,10 @@ MonoBehaviour:
   duration: 0
   preConditions:
   - key: Waiting
-    value: 0
+    value: 1
   afterEffects:
   - key: treatPatient
-    value: 0
+    value: 1
   agent: {fileID: 0}
   running: 0
 --- !u!1 &2629889911763255196
