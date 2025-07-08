@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Wer das liest ist doof
-
 public class Doctor : GAgent
 {
     void Start()
