@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f6cb284536e3f4393832ed195aa6b5, type: 3}
+  m_Name: ComeToAlly
+  m_EditorClassIdentifier: 
+  ActionName: Move to nearby Ally
+  ActionPriority: 1
+  preconditions:
+  - {fileID: 11400000, guid: 3f2eb60653e915a4fbd5b7605ac82631, type: 2}
+  actionEffect: {fileID: 11400000, guid: 40d6e0c9f7c22eb4bae2530ba94a2770, type: 2}
